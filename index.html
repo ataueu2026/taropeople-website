@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taro People connects Pacific communities, culture, farming and businesses.">
+  <title>Taro People | Together We Grow</title>
+  <style>
+    :root {
+      --green: #164b38;
+      --light: #f4f7f0;
+      --gold: #f4c66b;
+      --text: #24362d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--green);
+      text-decoration: none;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a { color: var(--green); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      background: linear-gradient(135deg, #164b38, #357b57);
+      color: white;
+      padding: 100px 7%;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      margin: 0;
+    }
+    .hero p { max-width: 650px; margin: 18px auto 30px; }
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #213626;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 6px;
+    }
+    .btn:hover { background: #ffe09b; }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    section { padding: 70px 7%; }
+    .section-title { text-align: center; margin-bottom: 32px; }
+    .section-title h2 { font-size: 32px; margin-bottom: 8px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 5px 18px #0000000d;
+    }
+    .card h3 { color: var(--green); }
+    .highlight { background: #e5eee4; text-align: center; }
+    .highlight p { max-width: 750px; margin: 15px auto; }
+    footer {
+      background: #102f25;
+      color: white;
+      padding: 35px 7%;
+      text-align: center;
+    }
+    footer a { color: var(--gold); }
+    @media (max-width: 600px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; }
+      .hero { padding: 70px 6%; }
+      section { padding: 50px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">🌿 TARO PEOPLE</a>
+  <nav>
+    <a href="#community">Community</a>
+    <a href="#business">Business Partners</a>
+    <a href="#plus">Taro People Plus</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Together We Grow.</h1>
+    <p>
+      Connecting Pacific communities through culture,
+      food, farming, business and shared opportunities.
+    </p>
+    <a class="btn" href="#business">Become a Business Partner</a>
+    <a class="btn btn-outline" href="#community">Explore Our Community</a>
+  </div>
+
+  <section id="community">
+    <div class="section-title">
+      <h2>Welcome to Taro People</h2>
+      <p>Celebrating our roots. Connecting our future.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>🌴 Culture & Community</h3>
+        <p>Bringing people together to share stories, traditions, knowledge and experiences.</p>
+      </div>
+      <div class="card">
+        <h3>🌱 Farming & Food</h3>
+        <p>Supporting conversations about taro, agriculture, traditional foods and growers.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Business & Opportunity</h3>
+        <p>Connecting businesses with communities and exploring opportunities to collaborate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="business" class="highlight">
+    <h2>Become a Founding Business Partner</h2>
+    <p>
+      Are you a farmer, supplier, retailer, restaurant owner
+      or service provider? Join our growing business network.
+    </p>
+    <p>
+      Registration is free. Explore opportunities for
+      promotion, networking and future member-exclusive offers.
+      Applications are reviewed before approval.
+    </p>
+    <a class="btn"
+       href="https://forms.gle/fXoi3D3AVsu4PdYD7"
+       target="_blank"
+       rel="noopener noreferrer">
+      Register Your Business
+    </a>
+  </section>
+
+  <section id="plus">
+    <div class="section-title">
+      <h2>✨ Taro People Plus</h2>
+      <p>Our future membership program — coming soon.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Exclusive Offers</h3>
+        <p>Planned discounts and special benefits from participating businesses.</p>
+      </div>
+      <div class="card">
+        <h3>Community Experiences</h3>
+        <p>Future content, events and opportunities to connect.</p>
+      </div>
+      <div class="card">
+        <h3>Giveaways & Rewards</h3>
+        <p>We're exploring promotional giveaways and rewards, subject to applicable rules and eligibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="highlight">
+    <h2>Let's Grow Together</h2>
+    <p>Have a question or interested in collaborating?</p>
+    <a class="btn" href="mailto:hellotaropeople@gmail.com">
+      Contact Taro People
+    </a>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Taro People</strong> — Together We Grow 🌱</p>
+  <p>Operated by Tecbench Pty Ltd, Australia</p>
+  <p>Contact: <a href="mailto:hellotaropeople@gmail.com">hellotaropeople@gmail.com</a></p>
+  <p>&copy; <span id="year"></span> Taro People. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
