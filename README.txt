@@ -1,0 +1,1 @@
+Taro People V14: Updated Business & Opportunity card photo. Image appears once only; Founding Business Partner section retains its text and registration link. Upload index.html and assets/business.webp to update existing site.

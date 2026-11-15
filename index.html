@@ -1,210 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Taro People connects Pacific communities, culture, farming and businesses.">
-  <title>Taro People | Together We Grow</title>
-  <style>
-    :root {
-      --green: #164b38;
-      --light: #f4f7f0;
-      --gold: #f4c66b;
-      --text: #24362d;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--light);
-      line-height: 1.6;
-    }
-    header {
-      background: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--green);
-      text-decoration: none;
-    }
-    nav { display: flex; flex-wrap: wrap; gap: 18px; }
-    nav a { color: var(--green); text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    .hero {
-      background: linear-gradient(135deg, #164b38, #357b57);
-      color: white;
-      padding: 100px 7%;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 70px);
-      margin: 0;
-    }
-    .hero p { max-width: 650px; margin: 18px auto 30px; }
-    .btn {
-      display: inline-block;
-      background: var(--gold);
-      color: #213626;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      margin: 6px;
-    }
-    .btn:hover { background: #ffe09b; }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-    }
-    section { padding: 70px 7%; }
-    .section-title { text-align: center; margin-bottom: 32px; }
-    .section-title h2 { font-size: 32px; margin-bottom: 8px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 5px 18px #0000000d;
-    }
-    .card h3 { color: var(--green); }
-    .highlight { background: #e5eee4; text-align: center; }
-    .highlight p { max-width: 750px; margin: 15px auto; }
-    footer {
-      background: #102f25;
-      color: white;
-      padding: 35px 7%;
-      text-align: center;
-    }
-    footer a { color: var(--gold); }
-    @media (max-width: 600px) {
-      header { justify-content: center; text-align: center; }
-      nav { justify-content: center; }
-      .hero { padding: 70px 6%; }
-      section { padding: 50px 6%; }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Taro People brings communities together through culture, taro farming, food and business opportunities. Together We Grow.">
+<meta name="theme-color" content="#092f23">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Taro People | Together We Grow</title>
+<style>
+:root{--forest:#143c2b;--deep:#103526;--gold:#a4ed24;--cream:#f7f8f1;--ink:#173b2d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}a{color:inherit}
+.site-header{background:var(--deep);color:white;padding:12px max(5%,calc((100vw - 1400px)/2));display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}.brand img{width:60px;height:60px;border-radius:13px;object-fit:cover}.brand strong{font-size:clamp(21px,2.2vw,33px);letter-spacing:.025em;line-height:1.1;display:block}.brand small{display:block;letter-spacing:.18em;font-size:10px;font-weight:700;margin-top:5px}
+nav{display:flex;align-items:center;gap:clamp(12px,2vw,27px);flex-wrap:wrap}nav a{text-decoration:none;font-size:14px;font-weight:700}nav a:hover,nav a:focus-visible{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:7px}
+.btn{display:inline-block;padding:13px 22px;background:var(--gold);border-radius:30px;color:#103526;font-weight:800;text-decoration:none;border:2px solid var(--gold);cursor:pointer;font-size:15px;transition:transform .15s,background .15s}.btn:hover{background:#c7fb70;transform:translateY(-1px)}.btn-outline{background:transparent;border-color:white;color:white}.btn-outline:hover{background:#ffffff24}
+.hero{position:relative;min-height:570px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:linear-gradient(90deg,#03271e75,#042a21a6 38%,#062a20a8 65%,#03271e50),url('assets/hero.webp') center/cover no-repeat;overflow:hidden}
+.hero:before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;background:repeating-linear-gradient(145deg,#f5e7c9 0 6px,#092e23 6px 13px,#f5e7c9 13px 17px);opacity:.75}
+.hero-inner{position:relative;z-index:1;max-width:860px;padding:90px 25px}.eyebrow{font-size:13px;letter-spacing:.25em;font-weight:800;text-transform:uppercase}.hero h1{font-family:"Brush Script MT","Segoe Script",Georgia,serif;font-style:italic;font-size:clamp(49px,7.3vw,100px);font-weight:600;line-height:1.1;margin:20px 0 15px;text-shadow:0 3px 15px #0009}.hero h1 em{color:var(--gold);font-style:inherit}.hero p{font-size:clamp(17px,2vw,23px);max-width:660px;margin:0 auto 28px;text-shadow:0 2px 7px #0009}.hero-actions{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+section{padding:76px 6%}.section-head{text-align:center;margin:0 auto 36px;max-width:760px}.section-head h2,section h2{font-size:clamp(28px,3.4vw,43px);line-height:1.15;margin:0 0 12px}.section-head p{margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1240px;margin:auto}.feature{border-radius:23px;overflow:hidden;background:var(--deep);color:white;box-shadow:0 10px 24px #15352921;border:1px solid #2a5941}.feature img{display:block;width:100%;height:215px;object-fit:cover}.feature-content{padding:23px 25px 27px}.feature h3{font-size:23px;line-height:1.2;margin:0 0 9px}.feature p{margin:0;color:#e3ede7}
+.values{max-width:1200px;margin:42px auto 0;display:flex;justify-content:space-around;gap:15px;flex-wrap:wrap;color:var(--deep);font-weight:800;letter-spacing:.07em}.values span{padding:6px 12px}
+.highlight{background:#eaf2e7}.split{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}.split p{font-size:17px}.split img{width:100%;border-radius:20px;object-fit:cover;box-shadow:0 10px 30px #0002}.small{font-size:13px!important}
+.plus{background:#f4f8ef}.mini{background:white;border:1px solid #d8e5d4;border-radius:18px;padding:27px}.mini h3{margin-top:0}
+.contact{text-align:center}.contact-form{max-width:590px;margin:28px auto 0;text-align:left}.contact-form label{display:block;font-weight:700;margin:0 0 6px}.contact-form input,.contact-form select,.contact-form textarea{width:100%;display:block;border:1px solid #aabeb1;border-radius:9px;padding:13px 14px;font:inherit;background:white;margin:0 0 18px;color:#12372c}.contact-form textarea{resize:vertical}.contact-form :focus-visible{outline:3px solid #c99730;outline-offset:2px}.contact-form button{border-radius:9px}
+footer{background:var(--deep);color:white;text-align:center;padding:35px 6%}footer p{margin:7px}footer a{color:var(--gold)}
+@media(max-width:800px){.site-header{justify-content:center;text-align:center}.brand small{letter-spacing:.07em}nav{justify-content:center}.cards{grid-template-columns:1fr;max-width:520px}.feature img{height:235px}.split{grid-template-columns:1fr}.hero{min-height:480px}.hero-inner{padding:65px 18px}section{padding:54px 5%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+/* Approved banner artwork includes its own logo and headline; avoid duplicate text overlays. */
+.hero{display:block;min-height:0;background:var(--deep);line-height:0;overflow:hidden}
+.hero:before{display:none}
+.hero img{display:block;width:100%;height:auto;object-fit:contain}
+.hero-actions-banner{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:22px 16px 26px;background:var(--deep);border-top:3px solid #a4ed24}
+.btn-dark-outline{background:transparent;border-color:#a4ed24;color:white}
+.btn-dark-outline:hover{background:#ffffff20}
+@media(max-width:800px){.hero{min-height:0}.hero img{width:100%;height:auto}.hero-actions-banner{padding:18px 12px 22px}}
+/* Visual language matches the approved Taro People banner */
+.site-header{border-bottom:2px solid #315f3d}
+.site-header .brand img{border:1px solid #ffffff38}
+.section-head h2,section h2{color:var(--deep)}
+.section-head h2:after{content:"";display:block;width:72px;height:5px;border-radius:6px;background:var(--gold);margin:15px auto 0}
+.split h2:after,.contact h2:after{content:"";display:block;width:72px;height:5px;border-radius:6px;background:var(--gold);margin:16px 0 0}
+.contact h2:after{margin:16px auto 0}
+.feature img{border-bottom:4px solid var(--gold)}
+.feature h3{color:#fff}
+.mini{border-top:5px solid var(--gold);box-shadow:0 8px 24px #15352910}
+.mini h3{color:var(--deep)}
+.values span{border-bottom:2px solid #9ccf63}
+footer{border-top:5px solid var(--gold)}
+@media(max-width:800px){.hero img{width:100%;height:auto}}
+
+/* V5: framed editorial hero keeps the complete approved banner visible on desktop. */
+body{background:#f7f8f3}
+.site-header{padding:15px max(4%,calc((100vw - 1340px)/2));box-shadow:0 4px 20px #071e1418;position:relative;z-index:2}
+.hero-v5{padding:32px 4% 30px;background:linear-gradient(160deg,#0d3023 0%,#164630 100%);color:white}
+.hero-frame{max-width:1320px;margin:0 auto;overflow:hidden;border-radius:22px;box-shadow:0 24px 55px #031a1245;border:1px solid #ffffff26;background:#092b1f}
+.hero-art{display:block;width:100%;height:auto;aspect-ratio:1670/942;object-fit:contain}
+.hero-v5-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:27px 0 0}
+.mobile-hero-copy{display:none}
+#community{background:#fafbf7}
+#community .section-head{margin-bottom:42px}
+.feature{background:white;color:#173b2d;border:1px solid #e2e9df;box-shadow:0 12px 32px #12362614;transition:transform .2s ease,box-shadow .2s ease}
+.feature:hover{transform:translateY(-4px);box-shadow:0 18px 40px #12362625}
+.feature h3{color:#123b2b}.feature p{color:#43594b}.feature img{height:245px;border-bottom:0}
+.feature-content{padding:26px 27px 31px;border-top:5px solid #a4ed24}
+.section-head h2:after{width:58px}
+.highlight{background:#e9f0e7}
+.split{max-width:1200px;gap:65px}
+.split img{box-shadow:0 18px 40px #12362623}
+.plus{background:#f8faf5}
+.mini{box-shadow:0 10px 30px #12362610}
+.contact{background:#e9f0e7}
+@media(max-width:800px){
+ .hero-v5{padding:16px 0 27px}
+ .hero-frame{border:0;border-radius:0;box-shadow:none;max-width:none;height:clamp(260px,66vw,480px);position:relative}
+ .hero-art{width:200%;height:auto;max-width:none;aspect-ratio:auto;object-fit:contain;position:absolute;right:0;top:50%;transform:translateY(-50%)}
+ .mobile-hero-copy{display:block;text-align:center;padding:28px 7% 0;max-width:600px;margin:auto}
+ .mobile-kicker{color:#c4f36b;font-size:11px;letter-spacing:.13em;font-weight:800}
+ .mobile-hero-copy h1{font-family:Georgia,serif;font-size:clamp(35px,7vw,51px);font-style:italic;line-height:1.12;margin:14px 0}
+ .mobile-hero-copy p{font-size:16px;line-height:1.6;margin:0}
+ .hero-v5-actions{padding:24px 6% 0}
+ .feature img{height:235px}
+ .split{gap:26px}
+}
+@media(max-width:440px){.hero-v5-actions .btn{width:100%;text-align:center;max-width:340px}}
+
+/* V7: full-width, edge-to-edge approved TP uniform banner */
+.hero-v5{padding:0 0 26px;background:#123c2b}
+.hero-frame{max-width:none;width:100%;margin:0;border:0;border-radius:0;box-shadow:none;overflow:hidden}
+.hero-art{display:block;width:100%;height:clamp(390px,48vw,760px);aspect-ratio:auto;object-fit:cover;object-position:center center}
+@media(max-width:800px){
+ .hero-v5{padding:0 0 22px}
+ .hero-frame{height:clamp(260px,58vw,480px);position:relative}
+ .hero-art{position:static;transform:none;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:73% center}
+}
+/* V9 responsive banner: preserve every pixel of the artwork on all screens. */
+.hero-v5{padding:0 0 26px}
+.hero-frame{height:auto!important;position:static!important;overflow:visible}
+.hero-art{display:block!important;position:static!important;transform:none!important;width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important}
+@media(max-width:800px){.hero-v5{padding-bottom:22px}.hero-frame{height:auto!important}.mobile-hero-copy{display:block;padding-top:22px}}
+
+/* V10: single brand in navigation; one accessible live-text hero headline. */
+.hero-clean{background:#103a2b;padding:0 0 24px}
+.hero-clean .hero-frame{position:relative!important;overflow:hidden!important;height:clamp(420px,38vw,690px)!important;background:#153b2a}
+.hero-clean .hero-art{display:block!important;position:absolute!important;inset:0;transform:none!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important}
+.hero-clean .hero-message{position:absolute;z-index:1;top:50%;left:clamp(24px,5vw,110px);transform:translateY(-50%);width:min(41%,620px);color:white;text-align:left;line-height:1.25;text-shadow:0 2px 12px #001d15aa}
+.hero-clean .hero-message h1{font-family:Georgia,serif;font-style:italic;font-size:clamp(36px,4.2vw,76px);font-weight:700;line-height:1.05;margin:0 0 20px}
+.hero-clean .hero-message h1:after{content:"";display:block;width:65%;height:6px;background:#8de817;border-radius:100%;margin-top:12px;transform:rotate(-2deg)}
+.hero-clean .hero-message p{font-size:clamp(16px,1.55vw,23px);line-height:1.5;margin:0;max-width:550px;font-weight:600}
+@media(max-width:800px){
+ .hero-clean .hero-frame{height:auto!important;overflow:visible!important;background:#103a2b}
+ .hero-clean .hero-art{position:static!important;inset:auto;width:100%!important;height:auto!important;object-fit:contain!important}
+ .hero-clean .hero-message{position:static;transform:none;width:auto;padding:25px 7% 10px;text-align:center;text-shadow:none}
+ .hero-clean .hero-message h1{font-size:clamp(34px,8vw,53px);margin-bottom:16px}
+ .hero-clean .hero-message h1:after{margin:12px auto 0}
+ .hero-clean .hero-message p{font-size:16px;line-height:1.55;margin:0 auto}
+ .hero-clean .hero-v5-actions{padding-top:20px}
+}
+/* V11: show full banner artwork and avoid duplicate logo/headline. */
+.hero-clean .hero-frame{height:auto!important;overflow:hidden!important}
+.hero-clean .hero-art{position:static!important;inset:auto!important;transform:none!important;width:100%!important;height:auto!important;object-fit:contain!important}
+.hero-clean .hero-message,.mobile-hero-copy{display:none!important}
+@media(max-width:800px){.hero-clean .hero-frame{height:auto!important}.hero-clean .hero-art{width:100%!important;height:auto!important}}
+.partner-copy{display:block;max-width:900px}.partner-copy>div{max-width:780px}
+</style>
 </head>
 <body>
-
-<header>
-  <a class="logo" href="#">🌿 TARO PEOPLE</a>
-  <nav>
-    <a href="#community">Community</a>
-    <a href="#business">Business Partners</a>
-    <a href="#plus">Taro People Plus</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
-  <div class="hero">
-    <h1>Together We Grow.</h1>
-    <p>
-      Connecting Pacific communities through culture,
-      food, farming, business and shared opportunities.
-    </p>
-    <a class="btn" href="#business">Become a Business Partner</a>
-    <a class="btn btn-outline" href="#community">Explore Our Community</a>
-  </div>
-
-  <section id="community">
-    <div class="section-title">
-      <h2>Welcome to Taro People</h2>
-      <p>Celebrating our roots. Connecting our future.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <h3>🌴 Culture & Community</h3>
-        <p>Bringing people together to share stories, traditions, knowledge and experiences.</p>
-      </div>
-      <div class="card">
-        <h3>🌱 Farming & Food</h3>
-        <p>Supporting conversations about taro, agriculture, traditional foods and growers.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Business & Opportunity</h3>
-        <p>Connecting businesses with communities and exploring opportunities to collaborate.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="business" class="highlight">
-    <h2>Become a Founding Business Partner</h2>
-    <p>
-      Are you a farmer, supplier, retailer, restaurant owner
-      or service provider? Join our growing business network.
-    </p>
-    <p>
-      Registration is free. Explore opportunities for
-      promotion, networking and future member-exclusive offers.
-      Applications are reviewed before approval.
-    </p>
-    <a class="btn"
-       href="https://forms.gle/fXoi3D3AVsu4PdYD7"
-       target="_blank"
-       rel="noopener noreferrer">
-      Register Your Business
-    </a>
-  </section>
-
-  <section id="plus">
-    <div class="section-title">
-      <h2>✨ Taro People Plus</h2>
-      <p>Our future membership program — coming soon.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <h3>Exclusive Offers</h3>
-        <p>Planned discounts and special benefits from participating businesses.</p>
-      </div>
-      <div class="card">
-        <h3>Community Experiences</h3>
-        <p>Future content, events and opportunities to connect.</p>
-      </div>
-      <div class="card">
-        <h3>Giveaways & Rewards</h3>
-        <p>We're exploring promotional giveaways and rewards, subject to applicable rules and eligibility.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="highlight">
-    <h2>Let's Grow Together</h2>
-    <p>Have a question or interested in collaborating?</p>
-    <a class="btn" href="mailto:hellotaropeople@gmail.com">
-      Contact Taro People
-    </a>
-  </section>
+<header class="site-header"><a class="brand" href="#top"><img src="assets/tp-logo.png" alt="TP leaf logo" width="60" height="60"><span><strong>TARO PEOPLE</strong><small>COMMUNITY · CULTURE · FARMING · BUSINESS</small></span></a><nav aria-label="Main navigation"><a href="#top">Home</a><a href="#community">Community</a><a href="#business">Business Partners</a><a href="#plus">Taro People Plus</a><a href="#contact">Contact</a></nav></header>
+<main id="top">
+<section class="hero-v5 hero-clean" aria-label="Welcome to Taro People">
+ <div class="hero-frame"><img class="hero-art" src="assets/hero.webp" alt="Pacific Islander family planting taro together in a tropical garden" fetchpriority="high" width="2172" height="616">
+</div>
+ <div class="hero-v5-actions"><a class="btn" href="#business">Become a Business Partner</a><a class="btn btn-dark-outline" href="#community">Explore Our Community</a></div>
+</section>
+<section id="community"><div class="section-head"><h2>Welcome to Taro People</h2><p>Celebrating our roots. Connecting our future.</p></div><div class="cards">
+<article class="feature"><img src="assets/community.webp" alt="Pacific family sharing time and traditions" loading="lazy"><div class="feature-content"><h3>Culture &amp; Community</h3><p>Share stories, traditions, knowledge and experiences across generations.</p></div></article>
+<article class="feature"><img src="assets/farming.webp" alt="Green taro plants growing on a farm" loading="lazy"><div class="feature-content"><h3>Farming &amp; Food</h3><p>Support conversations about taro, agriculture, traditional foods and growers.</p></div></article>
+<article class="feature"><img src="assets/business.webp" alt="Taro People representative beside a traditional Pacific Island taro market display" loading="lazy"><div class="feature-content"><h3>Business &amp; Opportunity</h3><p>Connect businesses with communities and explore opportunities together.</p></div></article>
+</div><div class="values" aria-label="Our focus"><span>🌿 PEOPLE</span><span>🌱 FOOD</span><span>◉ CULTURE</span><span>🤝 BUSINESS</span><span>🌏 OPPORTUNITY</span></div></section>
+<section class="highlight" id="business"><div class="split"><div><h2>Become a Founding Business Partner</h2><p>Are you a taro grower, farmer, supplier, restaurant owner, retailer or service provider? Join our growing business network.</p><p>Registration is <strong>free</strong>. Explore networking, possible promotions and future member-exclusive offers. Applications are reviewed before approval.</p><a class="btn" href="https://forms.gle/fXoi3D3AVsu4PdYD7" target="_blank" rel="noopener noreferrer">Register Your Business</a><p class="small">Registration does not guarantee approval or promotion.</p></div><img src="assets/partner.webp" alt="Business partners connecting in the community" loading="lazy"></div></section>
+<section class="plus" id="plus"><div class="section-head"><h2>Taro People Plus</h2><p>Our future membership program — coming soon.</p></div><div class="cards"><article class="mini"><h3>Exclusive Offers</h3><p>Planned discounts and special benefits from participating businesses.</p></article><article class="mini"><h3>Community Experiences</h3><p>Future content, events and opportunities to connect.</p></article><article class="mini"><h3>Giveaways &amp; Rewards</h3><p>We're exploring promotional giveaways and rewards, subject to applicable rules and eligibility.</p></article></div></section>
+<section class="highlight contact" id="contact"><h2>Let's Grow Together</h2><p>Have a question, idea or collaboration in mind? We'd love to hear from you.</p><form class="contact-form" action="https://formspree.io/f/xyewkdvw" method="POST"><label for="name">Your Name *</label><input id="name" name="name" type="text" autocomplete="name" maxlength="100" required><label for="email">Email Address *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required><label for="subject">Subject *</label><select id="subject" name="subject" required><option value="">Select a subject</option><option>General Enquiry</option><option>Business Partnership</option><option>Community &amp; Culture</option><option>Taro Farming &amp; Food</option><option>Taro People Plus</option><option>Other</option></select><label for="message">Your Message *</label><textarea id="message" name="message" rows="6" maxlength="5000" required></textarea><button class="btn" type="submit">Send Message</button><p class="small">Your details will be used to respond to your enquiry. Messages are processed by Formspree.</p></form></section>
 </main>
-
-<footer>
-  <p><strong>Taro People</strong> — Together We Grow 🌱</p>
-  <p>Operated by Tecbench Pty Ltd, Australia</p>
-  <p>Contact: <a href="mailto:hellotaropeople@gmail.com">hellotaropeople@gmail.com</a></p>
-  <p>&copy; <span id="year"></span> Taro People. All rights reserved.</p>
-</footer>
-
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
-
-</body>
-</html>
+<footer><p><strong>Taro People</strong> — Together We Grow</p><p>Operated by Tecbench Pty Ltd, Australia</p><p>Contact: <a href="mailto:hellotaropeople@gmail.com">hellotaropeople@gmail.com</a></p><p>© <span id="year">2026</span> Taro People. All rights reserved.</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
