@@ -13,6 +13,7 @@
 .brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}.brand img{width:60px;height:60px;border-radius:13px;object-fit:cover}.brand strong{font-size:clamp(21px,2.2vw,33px);letter-spacing:.025em;line-height:1.1;display:block}.brand small{display:block;letter-spacing:.18em;font-size:10px;font-weight:700;margin-top:5px}
 nav{display:flex;align-items:center;gap:clamp(12px,2vw,27px);flex-wrap:wrap}nav a{text-decoration:none;font-size:14px;font-weight:700}nav a:hover,nav a:focus-visible{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:7px}
 .btn{display:inline-block;padding:13px 22px;background:var(--gold);border-radius:30px;color:#103526;font-weight:800;text-decoration:none;border:2px solid var(--gold);cursor:pointer;font-size:15px;transition:transform .15s,background .15s}.btn:hover{background:#c7fb70;transform:translateY(-1px)}.btn-outline{background:transparent;border-color:white;color:white}.btn-outline:hover{background:#ffffff24}
+.btn-light-outline{background:transparent;border-color:var(--deep);color:var(--deep)}.btn-light-outline:hover{background:#10352612}
 .hero{position:relative;min-height:570px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:linear-gradient(90deg,#03271e75,#042a21a6 38%,#062a20a8 65%,#03271e50),url('assets/hero.webp') center/cover no-repeat;overflow:hidden}
 .hero:before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;background:repeating-linear-gradient(145deg,#f5e7c9 0 6px,#092e23 6px 13px,#f5e7c9 13px 17px);opacity:.75}
 .hero-inner{position:relative;z-index:1;max-width:860px;padding:90px 25px}.eyebrow{font-size:13px;letter-spacing:.25em;font-weight:800;text-transform:uppercase}.hero h1{font-family:"Brush Script MT","Segoe Script",Georgia,serif;font-style:italic;font-size:clamp(49px,7.3vw,100px);font-weight:600;line-height:1.1;margin:20px 0 15px;text-shadow:0 3px 15px #0009}.hero h1 em{color:var(--gold);font-style:inherit}.hero p{font-size:clamp(17px,2vw,23px);max-width:660px;margin:0 auto 28px;text-shadow:0 2px 7px #0009}.hero-actions{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
@@ -157,7 +158,10 @@ body{background:#f7f8f3}
     </article>
   </div>
   <div style="text-align:center;margin:30px auto 0">
-    <a class="btn" href="launch-updates.html">Sign up for launch updates</a>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+      <a class="btn" href="launch-updates.html">Sign up for launch updates</a>
+      <a class="btn btn-light-outline" href="bulletin-board.html">Visit the Plus Bulletin Board</a>
+    </div>
     <p class="small">Get Taro People Plus launch news, monthly giveaway updates and other Taro People news you choose.</p>
   </div>
 </section>

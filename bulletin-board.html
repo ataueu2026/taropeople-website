@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Public Taro People bulletin previews for community business news and future Pacific produce sourcing updates, with full details planned for Plus members.">
+<meta name="theme-color" content="#103526">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Taro People Bulletin Board | Taro People</title>
+<style>
+:root{--deep:#103526;--gold:#a4ed24;--cream:#f7f8f3;--ink:#173b2d;--muted:#52695b;--line:#d8e5d4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}a{color:inherit}
+.site-header{background:var(--deep);color:#fff;padding:14px max(4%,calc((100vw - 1340px)/2));display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;border-bottom:2px solid #315f3d}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none}.brand img{width:56px;height:56px;border-radius:12px;object-fit:cover;border:1px solid #ffffff38}.brand strong{font-size:clamp(20px,2.2vw,30px);letter-spacing:.025em;line-height:1.1;display:block}.brand small{display:block;letter-spacing:.14em;font-size:10px;font-weight:700;margin-top:5px}.back-link{font-weight:700;text-decoration:none}.back-link:hover,.back-link:focus-visible{text-decoration:underline;text-underline-offset:5px}
+main{padding:54px 20px 72px;background:linear-gradient(150deg,#f7f8f3 0%,#e9f0e7 100%)}.wrap{max-width:1080px;margin:0 auto}.intro{text-align:center;max-width:790px;margin:0 auto 34px}.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#42664c}.intro h1{font-size:clamp(34px,5vw,52px);line-height:1.1;color:var(--deep);margin:10px 0 14px}.intro p{font-size:17px;margin:0 auto 20px}.btn{display:inline-block;padding:12px 20px;background:var(--gold);border-radius:30px;color:var(--deep);font-weight:800;text-decoration:none;border:2px solid var(--gold);cursor:pointer;font-size:15px}.btn:hover{background:#c7fb70}.btn-outline{background:transparent;border-color:var(--deep)}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0 42px}.info{background:white;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:16px;padding:19px 20px;box-shadow:0 9px 24px #1236260d}.info strong{display:block;color:var(--deep);font-size:17px;margin-bottom:5px}.info p{margin:0;color:#43594b;font-size:14px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:38px 0 15px}.section-heading h2{font-size:clamp(25px,3vw,34px);color:var(--deep);margin:0}.section-heading p{margin:4px 0 0;color:var(--muted)}.tag{display:inline-block;background:#e4f5c9;color:#234d2c;border-radius:999px;padding:5px 11px;font-size:12px;font-weight:800;white-space:nowrap}
+.post{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #12362610}.post-top{padding:20px 24px;background:#f2f7ef;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.post-top h3{margin:0;color:var(--deep);font-size:20px}.post-body{padding:24px}.post-meta{display:flex;gap:9px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:12px}.post-body h4{font-size:23px;line-height:1.2;color:var(--deep);margin:0 0 10px}.post-body p{margin:8px 0}.public-copy{max-width:760px}.lock-panel{margin-top:22px;background:#f7f8f3;border:1px dashed #aabeb1;border-radius:14px;padding:18px 20px}.lock-panel h5{font-size:17px;color:var(--deep);margin:0 0 6px}.lock-panel p{color:#43594b;margin:0}.lock-panel ul{padding-left:20px;margin:10px 0 0;color:#43594b}.lock-mark{display:inline-flex;align-items:center;justify-content:center;background:var(--deep);color:white;width:30px;height:30px;border-radius:50%;margin-right:8px;font-size:15px}.partner-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.partner{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:16px;padding:21px;box-shadow:0 9px 24px #1236260d}.partner h3{color:var(--deep);font-size:19px;margin:12px 0 5px}.partner p{margin:5px 0;color:#43594b}.partner .where{font-size:13px;color:var(--muted)}.empty{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;color:var(--muted)}.empty strong{display:block;color:var(--deep);font-size:18px;margin-bottom:4px}.empty p{margin:0}
+.notice{margin:22px 0 0;padding:16px 18px;border-left:5px solid #d4a92f;background:#fff8e6;border-radius:8px;color:#59491d;font-size:14px}.cta{text-align:center;margin:40px auto 0;max-width:760px}.cta h2{font-size:28px;color:var(--deep);margin:0 0 8px}.cta p{color:#43594b;margin:0 auto 18px}.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{background:var(--deep);color:white;text-align:center;padding:24px 6%;border-top:4px solid var(--gold)}footer p{margin:5px}footer a{color:var(--gold)}
+@media(max-width:760px){.partner-grid{grid-template-columns:1fr}.site-header{justify-content:center;text-align:center}.brand small{letter-spacing:.07em}.back-link{width:100%}main{padding:36px 14px 50px}.info-grid{grid-template-columns:1fr}.section-heading{align-items:flex-start;flex-direction:column}.post-top{align-items:flex-start;flex-direction:column}.post-body{padding:20px 17px}.intro p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html#top"><img src="assets/tp-logo.png" alt="Taro People logo" width="56" height="56"><span><strong>TARO PEOPLE</strong><small>COMMUNITY · CULTURE · FARMING · BUSINESS</small></span></a>
+  <a class="back-link" href="index.html#plus">← Back to Taro People Plus</a>
+</header>
+<main>
+<div class="wrap">
+  <section class="intro" aria-labelledby="page-title">
+    <div class="eyebrow">Community · Business · Sourcing</div>
+    <h1 id="page-title">Taro People Bulletin Board</h1>
+    <p>See public updates about business opportunities and the products our community may want to source. Plus members will get access to fuller opportunity details as the membership system is built.</p>
+    <a class="btn" href="launch-updates.html">Get Taro People Plus updates</a>
+  </section>
+
+  <section class="info-grid" aria-label="How the bulletin board works">
+    <article class="info"><strong>Public visitors</strong><p>Browse approved headlines, general updates and sourcing topics.</p></article>
+    <article class="info"><strong>Plus members</strong><p>Future member access will include fuller offer and sourcing information, subject to confirmed details.</p></article>
+    <article class="info"><strong>Admin published</strong><p>Only Taro People admins create, approve, update or remove bulletin posts.</p></article>
+  </section>
+
+  <section aria-labelledby="sourcing-title">
+    <div class="section-heading"><div><h2 id="sourcing-title">Sourcing and import updates</h2><p>Community interest, supplier checks and progress updates.</p></div><span class="tag">Planning stage</span></div>
+    <article class="post">
+      <div class="post-top"><h3>Community sourcing update</h3><span class="tag">Example post format</span></div>
+      <div class="post-body">
+        <div class="post-meta"><span class="tag">Import interest</span><span>Posted by Taro People Admin</span></div>
+        <div class="public-copy">
+          <h4>Exploring demand for Pacific Island taro and produce</h4>
+          <p>We’re planning how Taro People could connect Pacific Island growers and suppliers with buyers in Australia. At this stage, we’re learning what products people want and investigating supply, import requirements and costs.</p>
+          <p><strong>No products are currently available to order through this notice.</strong> We’ll share an update if a specific opportunity is confirmed.</p>
+        </div>
+        <div class="lock-panel" aria-label="Preview of future Plus member information">
+          <h5><span class="lock-mark" aria-hidden="true">&#128274;</span>Plus member details — planned</h5>
+          <p>When member access is available, approved posts may include additional information such as:</p>
+          <ul><li>Product and origin details confirmed by the supplier</li><li>Import and supply-check progress</li><li>Estimated timing, quantity and landed price once verified</li><li>How to register interest or place an order, if ordering opens</li></ul>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="partners-title">
+    <div class="section-heading"><div><h2 id="partners-title">Taro People Plus Business Partners</h2><p>Businesses connected with the Plus partner program. Specific member offers will be added after each business confirms the details.</p></div><span class="tag">Admin managed</span></div>
+    <div class="partner-grid">
+      <article class="partner"><span class="tag">Partner profile</span><h3>Jay’s Organix (Island Eco-Smart)</h3><p>Farm consultation, bio-fertiliser and sustainable agriculture services.</p><p class="where">Suva, Fiji</p><p><strong>Plus offer:</strong> Details to be confirmed.</p></article>
+      <article class="partner"><span class="tag">Partner profile</span><h3>United Farming Investment (UFI Fiji)</h3><p>Farming consultancy, sustainable agriculture development and practical training.</p><p class="where">Tailevu, Fiji</p><p><strong>Plus offer:</strong> Details to be confirmed.</p></article>
+      <article class="partner"><span class="tag">Partner profile</span><h3>Tecbench</h3><p>Technology and computer services.</p><p class="where">Australia</p><p><strong>Plus offer:</strong> Details to be confirmed.</p></article>
+      <article class="partner"><span class="tag">Partner profile</span><h3>My Fit Ninja</h3><p>Fitness accessories and training products.</p><p class="where">Taro People business</p><p><strong>Plus offer:</strong> Details to be confirmed.</p></article>
+      <article class="partner"><span class="tag">Partner profile</span><h3>Sippo</h3><p>Business profile and member offer will be added when confirmed.</p><p><strong>Plus offer:</strong> Details to be confirmed.</p></article>
+      <article class="partner"><span class="tag">Partner profile</span><h3>K&amp;N</h3><p>Business profile and member offer will be added when confirmed.</p><p><strong>Plus offer:</strong> Details to be confirmed.</p></article>
+    </div>
+    <p class="note">Partner profiles and offers are published or updated by Taro People admins. No discount or offer is active until its terms are confirmed and posted.</p>
+  </section>
+
+  <section aria-labelledby="business-title">
+    <div class="section-heading"><div><h2 id="business-title">Business updates and member offers</h2><p>Announcements and benefits from participating businesses.</p></div><span class="tag">Admin approved</span></div>
+    <div class="empty"><strong>No active member offers have been posted yet.</strong><p>When a partner confirms an offer, admins will publish its details, eligibility, expiry date and redemption instructions here. Member-only terms will require secure Plus access before they are displayed.</p></div>
+  </section>
+
+  <section aria-labelledby="requests-title">
+    <div class="section-heading"><div><h2 id="requests-title">Community requests</h2><p>Topics and products the community is interested in sourcing.</p></div><span class="tag">Admin published</span></div>
+    <div class="empty"><strong>No community requests have been published yet.</strong><p>Requests can help us understand demand. Taro People admins will review and publish suitable summaries without exposing personal contact details.</p></div>
+  </section>
+
+  <p class="notice"><strong>Important:</strong> The member-only panel above is a design preview, not a protected member area. The current website has no member login yet, so no private offers, prices, supplier contacts or personal details should be placed here until secure access is built.</p>
+  <section class="cta"><h2>Have a sourcing idea or business update?</h2><p>Send it to Taro People for review. Submissions are suggestions only; admins decide what is published and will confirm details before posting.</p><div class="cta-actions"><a class="btn" href="index.html#contact">Contact Taro People</a><a class="btn btn-outline" href="index.html#plus">Explore Taro People Plus</a></div></section>
+</div>
+</main>
+<footer><p><strong>Taro People</strong> — Together We Grow</p><p><a href="index.html#top">Return to the home page</a></p></footer>
+</body>
+</html>
